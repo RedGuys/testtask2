@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group = 'ru.redguy.testtask2'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'commons-cli:commons-cli:1.4'
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'ru.redguy.testtask2.Main'
+        )
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
